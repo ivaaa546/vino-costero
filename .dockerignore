@@ -1,0 +1,7 @@
+.git
+.env
+vendor
+storage/logs
+storage/framework
+node_modules
+laravel-skeleton
