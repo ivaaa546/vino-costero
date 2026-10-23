@@ -19,7 +19,7 @@
         @endif
     </form>
 
-    <div style="overflow-x: auto;">
+    <div class="overflow-x-auto rounded-lg border border-stone-200">
         <table>
             <thead>
                 <tr>
@@ -113,12 +113,14 @@
                             </td>
                         @endforeach
                         <td style="text-align: right; white-space: nowrap;">
-                            <a href="{{ route($resource . '.edit', $record->{$key}) }}" class="btn btn-secondary btn-sm">Editar</a>
-                            <form action="{{ route($resource . '.destroy', $record->{$key}) }}" method="POST" style="display:inline;" onsubmit="return confirm('¿Está seguro de eliminar el registro #{{ $record->{$key} }}?');">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
-                            </form>
+                            <div style="display:inline-flex; align-items:center; justify-content:flex-end; gap:0.4rem;">
+                                <a href="{{ route($resource . '.edit', $record->{$key}) }}" class="btn btn-secondary btn-sm">Editar</a>
+                                <form action="{{ route($resource . '.destroy', $record->{$key}) }}" method="POST" style="display:inline; margin:0;" onsubmit="return confirm('¿Está seguro de eliminar el registro #{{ $record->{$key} }}?');">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                                </form>
+                            </div>
                         </td>
                     </tr>
                 @empty

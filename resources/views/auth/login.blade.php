@@ -21,22 +21,14 @@
         @csrf
         <div class="form-group">
             <label for="correo">Correo institucional</label>
-            <input type="email" id="correo" name="correo" value="{{ old('correo', 'jacs@gmail.com') }}" required autofocus class="form-control" placeholder="usuario@vinocostero.com">
+            <input type="email" id="correo" name="correo" value="{{ old('correo') }}" required autofocus class="form-control" placeholder="usuario@vinocostero.com">
         </div>
         <div class="form-group">
             <label for="contrasena">Contrasena</label>
-            <input type="password" id="contrasena" name="contrasena" value="12345678" required class="form-control" placeholder="********">
+            <input type="password" id="contrasena" name="contrasena" required class="form-control" placeholder="••••••••">
         </div>
         <button type="submit" class="btn btn-primary w-full py-3">Iniciar sesion</button>
     </form>
-
-    <div class="mt-7 border-t border-stone-200 pt-5 text-xs text-stone-500">
-        <strong class="text-wine">Credenciales de desarrollo</strong>
-        <ul class="mt-2 list-inside list-disc space-y-1">
-            <li>Administrador: <code>jacs@gmail.com</code></li>
-            <li>Contrasena: <code>12345678</code></li>
-        </ul>
-    </div>
 </div>
 </body>
 </html>

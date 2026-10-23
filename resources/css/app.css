@@ -51,4 +51,20 @@
     .alert { @apply mb-5 rounded-lg border px-4 py-3 text-sm; }
     .alert-success { @apply border-green-200 bg-green-50 text-green-800; }
     .alert-danger { @apply border-red-200 bg-red-50 text-red-800; }
+
+    table {
+        @apply w-full border-collapse text-left text-sm text-stone-700;
+    }
+    thead {
+        @apply border-b border-stone-200 bg-stone-50;
+    }
+    th {
+        @apply px-4 py-3 text-xs font-semibold uppercase tracking-wider text-stone-600;
+    }
+    td {
+        @apply px-4 py-3.5 border-b border-stone-100 align-middle;
+    }
+    tbody tr {
+        @apply transition-colors hover:bg-stone-50/70;
+    }
 }
